@@ -10,9 +10,16 @@ def checkIfNumeric(number):
         float(number)
         return True
     except ValueError:
-        print("Wrong input!")
+        print("Zly input!")
         return False
 
 
-number = input("Enter a number: ")
-
+while True:
+    number = input("Podaj liczbe: ")
+    if checkIfNumeric(number):
+        print("Podstawa: %s.\nWynik: %s" % (float(number), float(number) * float(number)))
+    elif number == "stop":
+        print("Koniec")
+        break
+    else:
+        continue
