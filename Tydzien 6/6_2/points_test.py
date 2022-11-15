@@ -21,24 +21,21 @@ class TestPolynomials(unittest.TestCase):
 
     def test_add(self):
         self.assertEqual(p.Point(1, 2) + p.Point(2, 1), p.Point(3, 3))
-        self.assertEqual(p.Point(1, 2) + p.Point(2, 1), p.Point(3, 3))
+        self.assertEqual(p.Point(1, 2) + p.Point(0, -1), p.Point(1, 1))
 
     def test_sub(self):
-        self.assertEqual(p.Point(1, 2) - p.Point(2, 1), p.Point(-1, 1))
         self.assertEqual(p.Point(1, 2) - p.Point(2, 1), p.Point(-1, 1))
 
     def test_mul(self):
         self.assertEqual(p.Point(1, 2) * p.Point(2, 1), 4)
-        self.assertEqual(p.Point(1, 2) * p.Point(2, 1), 4)
 
     def test_cross(self):
         self.assertEqual(p.Point(1, 2).cross(p.Point(2, 1)), -3)
-        self.assertEqual(p.Point(1, 2).cross(p.Point(2, 1)), -3)
 
     def test_length(self):
-        self.assertEqual(p.Point(1, 2).length(), 2.23606797749979)
-        self.assertEqual(p.Point(1, 2).length(), 2.23606797749979)
+        self.assertEqual(p.Point(0, 2).length(), 2)
+        self.assertEqual(p.Point(2, 2).length(), 2.8284271247461903)
 
     def test_hash(self):
-        self.assertEqual(hash(p.Point(1, 2)), hash(p.Point(1, 2)))
-        self.assertEqual(hash(p.Point(1, 2)), hash(p.Point(1, 2)))
+        self.assertEqual(hash(p.Point(1, 2)), hash((1, 2)))
+

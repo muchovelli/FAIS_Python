@@ -49,3 +49,4 @@ class Point:
     # bazujemy na tuple, immutable points
     def __hash__(self):
         return hash((self.x, self.y))
+
