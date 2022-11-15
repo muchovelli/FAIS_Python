@@ -39,13 +39,9 @@ class Triangle:
 
     # przesunięcie o (x, y)
     def move(self, i, k):
-        self.pt1.x += i
-        self.pt1.y += k
-        self.pt2.x += i
-        self.pt2.y += k
-        self.pt3.x += i
-        self.pt3.y += k
+        return Triangle(self.pt1.x + i, self.pt1.y + k, self.pt2.x + i, self.pt2.y + k, self.pt3.x + i, self.pt3.y + k)
 
+    # pole powierzchni
     def area(self):
         return (math.fabs((self.pt2.x - self.pt1.x) * (self.pt3.y - self.pt1.y) - (self.pt2.y - self.pt1.y) * (
                 self.pt3.x - self.pt1.x))) / 2

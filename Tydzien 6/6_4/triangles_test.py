@@ -3,6 +3,7 @@
 import unittest
 import triangles as tri
 
+
 class TestPolynomials(unittest.TestCase):
 
     def test_print(self):

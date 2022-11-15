@@ -3,6 +3,7 @@
 import unittest
 import points as p
 
+
 class TestPolynomials(unittest.TestCase):
 
     # Testy dla klasy Point
@@ -41,4 +42,3 @@ class TestPolynomials(unittest.TestCase):
     def test_hash(self):
         self.assertEqual(hash(p.Point(1, 2)), hash(p.Point(1, 2)))
         self.assertEqual(hash(p.Point(1, 2)), hash(p.Point(1, 2)))
-
