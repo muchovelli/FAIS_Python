@@ -88,3 +88,24 @@ def diff_poly(poly) -> list:
             continue
         result.append(i * x)
     return result
+
+# write a function which sums two polynomials
+def add_poly(poly1, poly2):
+    result = []
+    for i in range(max(len(poly1), len(poly2))):
+        if i < len(poly1) and i < len(poly2):
+            result.append(poly1[i] + poly2[i])
+        elif i < len(poly1):
+            result.append(poly1[i])
+        else:
+            result.append(poly2[i])
+    return result
+
+# write a function which takes a polynomial as an argument and returns a new function
+def poly_to_fun(poly):
+    def fun(x):
+        result = 0
+        for i, p in enumerate(poly):
+            result += p * x ** i
+        return result
+    return fun
