@@ -34,6 +34,7 @@ class Triangle:
         return not self == other
 
     # zwraca środek (masy) trójkąta
+    # write a functio nwhich returns the center of mass of a triangle
     def center(self):
         return Point((self.pt1.x + self.pt2.x + self.pt3.x) / 3, (self.pt1.y + self.pt2.y + self.pt3.y) / 3)
 

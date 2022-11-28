@@ -33,8 +33,7 @@ class TestPolynomials(unittest.TestCase):
         self.assertEqual(p.Point(1, 2).cross(p.Point(2, 1)), -3)
 
     def test_length(self):
-        self.assertEqual(p.Point(0, 2).length(), 2)
-        self.assertEqual(p.Point(2, 2).length(), 2.8284271247461903)
+        self.assertEqual(p.Point(1, 2).length(), 2.23606797749979)
 
     def test_hash(self):
         self.assertEqual(hash(p.Point(1, 2)), hash((1, 2)))
